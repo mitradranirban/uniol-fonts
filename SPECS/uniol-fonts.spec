@@ -27,6 +27,7 @@ BuildRequires: fontforge
 
 %prep
 %forgesetup
+cp Source1 Source2
  chmod 755 generate.pe
 ./generate.pe *.sfd
 
