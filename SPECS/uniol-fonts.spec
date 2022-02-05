@@ -5,7 +5,7 @@ Source0: {forgesource}
 Source1: https://github.com/mitradranirban/uniol-fonts/raw/main/SOURCE/66-0-uniol-fonts.conf
 Source2: https://github.com/mitradranirban/uniol-fonts/raw/main/SOURCE/generate.pe
 Version:   1.0.0
-Release:   2%{dist}
+Release:   3%{dist}
 URL: %{forgeurl}
 %global fontfamily    uniol        
 %global fontlicense       OFL
@@ -42,8 +42,11 @@ BuildRequires: fontforge
 %fontfiles
 
 %changelog
+Sat Feb 05 2022 16:50:14 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.0-2
+- changed tag to 1.0.0
+- added forgemacro 
 * Sat Feb 05 2022 14:10:14 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.0-2
-- chaged to forgesetup from forgeurl 
+- changed to forgesetup from forgeurl 
 - modified dtd line in fontconfig 
 
 * Thu Feb 03 2022 20:56:29 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.0-1
