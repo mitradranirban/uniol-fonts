@@ -1,6 +1,6 @@
 # SPDX-License-Identifqier: MIT
 %global forgeurl https://github.com/font-uniol
-%global tag 1.0.0
+%global tag 1
 Source0: {forgesource}
 Source1: https://github.com/mitradranirban/uniol-fonts/raw/main/SOURCE/66-0-uniol-fonts.conf
 Source2: https://github.com/mitradranirban/uniol-fonts/raw/main/SOURCE/generate.pe
@@ -22,6 +22,8 @@ BuildRequires: fontforge
  language. 
 }
 %fontpkg 
+
+%forgemacro
 
 %prep
 %forgesetup
