@@ -1,10 +1,13 @@
 # SPDX-License-Identifqier: MIT
 %global forgeurl https://github.com/font-uniol
 %global tag 1.0.1
-Source0: %{forgesource}
+%forgemeta
+
 Version:   1.0.1
-Release:   1%{dist}
+Release:   2%{dist}
 URL: %{forgeurl}
+Source0: %{forgesource}
+
 %global fontfamily    uniol        
 %global fontlicense       OFL
 %global fontlicenses      LICENCE
@@ -14,14 +17,14 @@ URL: %{forgeurl}
 %global fonts            *.ttf
 %global fontconfs        66-0-%{fontpkgname}.conf
 BuildRequires: fontforge 
+
 %global fontdescription  %{expand:
  This is an Unicode compliant Ol Chiki or Ol Cemet font.
  Ol Chiki is a modern alphabetic script used to write Santhali 
  language ued in variouss states of India. 
 }
-%fontpkg 
 
-%forgemacro
+%fontpkg 
 
 %prep
 %forgesetup
@@ -40,6 +43,9 @@ chmod 755 generate.pe
 %fontfiles
 
 %changelog
+Sat Feb 05 2022 22:30:36 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.1-2
+- setup %forgemeta before %forgesource
+
 Sat Feb 05 2022 21:50:48 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.1-1
 - upstream version bumped to 1.0.1 
 - fontconfig files and ttf generation script added to source
