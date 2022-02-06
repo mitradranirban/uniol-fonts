@@ -16,6 +16,8 @@ URL: https://github.com/mitradranirban/font-uniol
 %global fonts            *.ttf
 %global fontconfs        66-0-%{fontpkgname}.conf
 BuildRequires: fontforge 
+BuildRequires:  fontpackages-devel
+Requires:	fontpackages-filesystem
 
 %global fontdescription  %{expand:
  This is an Unicode compliant Ol Chiki or Ol Cemet font.
