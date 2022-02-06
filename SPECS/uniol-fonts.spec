@@ -1,6 +1,5 @@
 # SPDX-License-Identifqier: MIT
 %global commit fd2431cc7661f68e52d2b32598d720f60ba735ff
-%global gittag refs/tags/1.0.1
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Version:   1.0.1
@@ -25,7 +24,7 @@ Requires:	fontpackages-filesystem
  language ued in variouss states of India. 
 }
 
-Source0: https://github.com/mitradranirban/font-uniol/%{commit}.tar.gz
+Source0: https://github.com/mitradranirban/font-uniol/%{commit}/%{name}-%{shortcommit}.tar.gz
 
 %fontpkg 
 
@@ -46,23 +45,26 @@ chmod 755 generate.pe
 %fontfiles
 
 %changelog
-Sun Feb 06 2022 05:35:37 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.1-4
-- Removed forgemeta and make standard git source setup
-Sat Feb 05 2022 22:30:36 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.1-2
-- setup %forgemeta before %forgesource
 
-Sat Feb 05 2022 21:50:48 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.1-1
+
+*Sun Feb 06 2022 05:35:37 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.1-4
+- Removed forgemeta and make standard git source setup
+
+*Sat Feb 05 2022 22:30:36 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.1-2
+- setup %%forgemeta before %%forgesource
+
+*Sat Feb 05 2022 21:50:48 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.1-1
 - upstream version bumped to 1.0.1 
 - fontconfig files and ttf generation script added to source
 - removed reference to Source1 and Source2 in spec file as they are merged into upstream
 
-Sat Feb 05 2022 18:50:28 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.0-4
+*Sat Feb 05 2022 18:50:28 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.0-4
 - added copy command for Source2 and Source3
 - corrected typo for forgesource
 
-Sat Feb 05 2022 16:50:14 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.0-3
+*Sat Feb 05 2022 16:50:14 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.0-3
 - changed tag to 1.0.0
-- added %forgemacro 
+- added %%forgemacro 
 
 * Sat Feb 05 2022 14:10:14 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.0-2
 - changed to forgesetup from forgeurl 
