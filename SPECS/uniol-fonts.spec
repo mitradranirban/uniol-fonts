@@ -1,12 +1,11 @@
 # SPDX-License-Identifqier: MIT
-%global forgeurl https://github.com/font-uniol
-%global tag 1.0.1
-%forgemeta
+%global commit fd2431cc7661f68e52d2b32598d720f60ba735ff
+%global gittag ref/tag/1.0.1
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Version:   1.0.1
-Release:   2%{dist}
-URL: %{forgeurl}
-Source0: %{forgesource}
+Release:   3%{dist}
+URL: https://github.com/mitradranirban/font-uniol
 
 %global fontfamily    uniol        
 %global fontlicense       OFL
@@ -24,10 +23,12 @@ BuildRequires: fontforge
  language ued in variouss states of India. 
 }
 
+Source0: https://github.com/mitradranirban/font-uniol/%{commit}.tar.gz
+
 %fontpkg 
 
 %prep
-%forgesetup
+%autosetup -n font-uniol-%{commit}
 chmod 755 generate.pe
 ./generate.pe *.sfd
 
@@ -43,6 +44,8 @@ chmod 755 generate.pe
 %fontfiles
 
 %changelog
+Sun Feb 06 2022 05:35:37 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.1-3
+- Removed forgemeta and make standard git source setup
 Sat Feb 05 2022 22:30:36 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.1-2
 - setup %forgemeta before %forgesource
 
