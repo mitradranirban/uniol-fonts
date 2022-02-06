@@ -4,7 +4,7 @@
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Version:   1.0.1
-Release:   3%{dist}
+Release:   4%{dist}
 URL: https://github.com/mitradranirban/font-uniol
 
 %global fontfamily    uniol        
@@ -44,7 +44,7 @@ chmod 755 generate.pe
 %fontfiles
 
 %changelog
-Sun Feb 06 2022 05:35:37 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.1-3
+Sun Feb 06 2022 05:35:37 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.1-4
 - Removed forgemeta and make standard git source setup
 Sat Feb 05 2022 22:30:36 +0530 Dr Anirban Mitra <mitra_anirban@yahoo.co.in> -  1.0.1-2
 - setup %forgemeta before %forgesource
